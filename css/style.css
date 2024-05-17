@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all .2s linear;
     text-decoration: none;
 }
@@ -147,19 +147,36 @@ body{
     display: none;
 }
 
-.home{
+.home {
     min-height: 100vh;
     width: 100vw;
-    background-image: url(../images/img1.jpg);
-    background-size: cover;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
     text-align: center;
     padding: 0 1rem;
-    position: relative;
     overflow: hidden !important;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/image.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px); /* Adjust the blur value as needed */
+    z-index: -1; /* Ensure the background is behind the content */
+}
+
+.home .content {
+    position: relative;
+    z-index: 1; /* Ensure the content is above the blurred background */
 }
 
 .home h1{
