@@ -39,12 +39,27 @@ $(document).ready(function(){
    (function ($) {
     "use strict";
     
-    $(".clients-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: { 0: {items: 2}, 768: {items: 4}, 900: {items: 6} }
-    });
+    $(document).ready(function(){
+        $(".clients-carousel").owlCarousel({
+          loop: true, // Set to false if you don't want the items to loop
+          margin: 30, // Adjust the margin as needed
+          nav: true,
+          dots: true,
+          autoplay: false,
+          responsive: {
+            0: {
+              items: 1
+            },
+            600: {
+              items: 3
+            },
+            1000: {
+              items: 3
+            }
+          }
+        });
+      });
+      
 
     $(".testimonials-carousel").owlCarousel({
         autoplay: true,
