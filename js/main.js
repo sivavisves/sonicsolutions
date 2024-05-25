@@ -45,7 +45,7 @@ $(document).ready(function(){
           margin: 30, // Adjust the margin as needed
           nav: true,
           dots: true,
-          autoplay: false,
+          autoplay: true,
           responsive: {
             0: {
               items: 1
