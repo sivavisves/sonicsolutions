@@ -170,7 +170,7 @@ body{
     background-image: url(../images/bg_image.png);
     background-size: cover;
     background-position: center;
-    filter: blur(5px); /* Adjust the blur value as needed */
+    filter: blur(8px); /* Adjust the blur value as needed */
     z-index: -1; /* Ensure the background is behind the content */
 }
 
